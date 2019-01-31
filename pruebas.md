@@ -528,7 +528,7 @@ Ejemplo **c | Solicitud correcta**
 	{
 	"idcompany": "INSPIDE",
 	"token": "INSPIDEmola",
-	"mode": “10”,
+	"mode": "10",
 	"withgeom":1
 	}
 ```
@@ -623,7 +623,7 @@ Ejemplo **d | Solicitud correcta**
 	{
 	"idcompany": "INSPIDE",
 	"token": "INSPIDEmola",
-	"category": “15,1”,
+	"category": "15,1",
 	"withgeom":1
 	}
 ```
@@ -671,9 +671,3 @@ Ejemplo **b | Solicitud correcta**
 	"withgeom":0
 	}
 ```
-
-# **Autoría**
-
-|Autor| Versión  |
-|:-:|:-:|:-:|:-:|
-|<img src="/images/inspide2.png" alt="Ayuda" width="100"/> 	|  0.**2** 	|
