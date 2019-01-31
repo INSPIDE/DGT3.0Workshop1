@@ -1,69 +1,98 @@
-# **Ponentes**
+# **Workshop | Pruebas de conexión real**
 
-|Imagen|  Nombre | Empresa | Cargo | email  | Linkedin |
-|:-:|:-:|:-:|:-:|
-| <img src="/images/jgcasta_bn.png" alt="INSPIDE" width="50"/> |    José Gómez Castaño	| <img src="/images/inspide2.png" alt="INSPIDE" width="100"/> |  **CTO** | jgcasta@inspide.com 	| [linkedin.com/in/josegomezcastano](https://linkedin.com/in/josegomezcastano) |
+Realización de pruebas de integración asistidas por el equipo de desarrollo de la Plataforma DGT 3.0.
+
+## *01* **Ponentes** <a name="id1"></a>
+
+| Imagen  |  Nombre |  Empresa |Cargo|email|Linkedin|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|  <img src="/images/jgcasta_bn.png" alt="INSPIDE" width="50"/> | José Gómez Castaño  | <img src="/images/inspide2.png" alt="INSPIDE" width="100"/>   | **CTO** | jgcasta@inspide.com 	| [linkedin.com/in/josegomezcastano](https://linkedin.com/in/josegomezcastano) |
 | <img src="/images/jjcabrera_bn.png" alt="INSPIDE" width="50"/> |    Juan José Cabrera	| <img src="/images/inspide2.png" alt="INSPIDE" width="100"/> |  **CEO** | jjcabrera@inspide.com 	| [linkedin.com/in/juanjosecabreragarcia](https://linkedin.com/in/juanjosecabreragarcia) |
-||   |  |  |   |  |
-||   |  |  |   |  |
-||   |  |  |   |  |
+| <img src="/images/ivanvega.jpeg" alt="KPMG" width="50"/> | Iván Vega | <img src="/images/kpmg.png" alt="KPMG" width="100"/> | **Project Leader / Senior Systems Engeenier / Cloud Expert** | ivanvega@kpmg.es | [linkedin.com/in/ivan-vega-16488782](https://linkedin.com/in/ivan-vega-16488782) |
 
-# **Índice**
 
-1. [Objetivos](#id1)
-2. [Fases de la sesión](#id2)
-3. [¿Qué es DGT 3.0?](#id3)
-4. [Definición PMV](#id4)
-5. [Formas de conexión a DGT3.0](#id5)
-6. [Pruebas](#id6)
-7. [Próximos pasos](#id7)
-8. [Preguntas frecuentes](#id8)
-9. [Resumen final](#id9)
+## *02* Ronda de **presentaciones** <a name="id2"></a>
 
-# **Objetivos** <a name="id1"></a>
+Ronda inicial de presentaciones entre todos los asistentes al workshop.
 
-- A
-- B
-- C
-- D
+## *03* Información **práctica** <a name="id3"></a>
 
-# **Fases** de la sesión <a name="id2"></a>
+<img src="/images/question.png" alt="API" width="20"/> **Requerimientos previos**
 
-- Explicación **DGT 3.0**
-- Prueba prácticas [ir](pruebas.md)
-- Próximos pasos.
+- Sala.
+- Conexión a internet.
+- Equipos informáticos individuales (PCs) y grupales (proyector).
+- Certificado Cliente.
+- Tener accesible el rango de IPs en la Plataforma DGT 3.0.
+- Conocimiento de los asistentes sobre el manjejo de APIs en la tecnología del Cliente.
+- Firma de la documentación administrativa: NDA, Responsabilidad sobre el certificado y conexión, etc.
 
-# ¿Qué es **DGT 3.0**? <a name="id3"></a>
+
+<img src="/images/question.png" alt="API" width="20"/> **Documentación del API Bandeja de Salida**
+
+La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) y  [Swagger](https://dev.iot-platform.co.uk/swagger-ui.html).
+
+
+<img src="/images/question.png" alt="API" width="20"/> **Herramientas**
+
+Para la ejecución de las pruebas es necesario el uso de un Cliente REST. Se propone la *descarga* de [Postman](https://www.getpostman.com/downloads/) como cliente para el seguimiento del workshop.
+
+
+## *04* **Índice** <a name="id4"></a>
+
+1. [Ponentes](#id1)
+2. [Ronda de presentaciones](#id2)
+3. [Información práctica](#id3)
+4. [Índice](#id4)
+5. [Objetivos](#id5)
+6. [¿Qué es DGT 3.0?](#id6)
+7. [Definición PMV](#id7)
+8. [Formas de conexión a DGT3.0](#id8)
+9. [¿Cuando conectarse a la Bandeja de Salida?](#id9)
+10. [Pruebas](#id10)
+11. [Preguntas frecuentes](#id11)
+12. [Resumen final](#id12)
+13. [Próximos pasos](#id13)
+14. [Recopilación de información de fabricantes](#id14)
+
+## *05* **Objetivos** <a name="id5"></a>
+
+### General
+
+Realizar pruebas de integración detalladas controladas por el equipo de desarrollo de la plataforma DGT 3.0.
+
+### Actividades
+
+- Explicación proyecto DGT 3.0.
+- Explicación de formas de conxión a la Plataforma DGT 3.0.
+- Asesoramiento técnico a los equipos de desarrollo en relación a los mecanismos de integración existentes.
+- Resolución de dudas tanto técnicas como funcionales.
+- Recopilación de información técnica del fabricante.
+
+## *06* ¿Qué es **DGT 3.0**? <a name="id6"></a>
 
 |Definición | Presentación|
 |:-|:-|
-| La Plataforma de Vehículo Conectado DGT 3.0 es una plataforma que ofrece servicios de seguridad vial y movilidad inteligente bajo el concepto SaaS basados en el procesamiento de información espacial.| [![Explicación PMV](/images/presetanciondgt30.png)]("/images/dgt30.pdf") |
+| La Plataforma de Vehículo Conectado DGT 3.0 es una plataforma que ofrece servicios de seguridad vial y movilidad inteligente bajo el concepto SaaS basados en el procesamiento de información espacial.| <a href="/images/dgt30.pdf"> <img src="/images/presetanciondgt30.png"></a>|
 
+
+> <img src="/images/question.png" alt="Ayuda" width="20"/> **Nota**
+>
+>
 > Los servicios expuestos en DGT 3.0 abarcan todas las fases del ciclo de vida de un dato espacial:
 >
 > - **Procesamiento en tiempo real** de grandes volúmenes de datos de carácter espacial y alfanumérico para su consumo.
 > - **Análisis espacial y aplicación de diferentes tipos de lógicas** de seguridad vial sobre el Big data disponible para la obtención de KPIs.
 > - **Envío de información de seguridad vial** cuando el nivel de riesgo supera un umbral prestablecido.
 >
->
-> <img src="/images/question.png" alt="Ayuda" width="20"/> **Ayuda**
->
-> Los Servicios ofrecidos por DGT 3.0 contribuyen a la mejora de la seguridad vial y movilidad a través de la prevención de accidentes de tráfico y a la minimización de sus efectos, especialmente para la vida y la salud de las personas.
->
->
-> <img src="/images/question.png" alt="API" width="20"/> **Información API BS**
->
-> La información al API de la **Bandeja de Salida** se encuentra en la siguiente url: [API BS](https://bandejasalida.docs.apiary.io/#reference/0/getroads/getcategories).
->
->
 
-# Definición **PMV** <a name="id4"></a>
+## *07* Definición **PMV** <a name="id7"></a>
 
 |Definición |  Video de referencia|
 |:-|:-|
 | Es un nuevo concepto que consiste en virtualizar los Paneles de Mensaje Variable tradicionales (físicos) para permite a la Dirección General de Tráfico regular la circulación adaptándola a las circunstancias cambiantes del tráfico. Se utilizan para dar información a los conductores, advertirles de posibles peligros y dar recomendaciones en cualquier punto, tramo o área de la red viaria.| [![Explicación PMV](/images/PMV.png)](https://www.youtube.com/watch?v=XBvzUR3PLQ4)|
 
-# Formas de conexión a **DGT3.0** <a name="id5"></a>
+## *08* Formas de conexión a **DGT3.0** <a name="id8"></a>
 
 |Bandeja de Salida |  Bandeja de Difusión |
 |:-|:-|
@@ -72,9 +101,7 @@
 |En **producción** en **marzo 2019** |  En **producción** en **marzo 2019** |
 |Documentación [**aquí**](https://bandejasalida.docs.apiary.io/)|  Documentación *próximamente* |
 
-
-
-# ¿Cuando conectarse a la **Bandeja de Salida?** <a name="id6"></a>
+## *09* ¿Cuando conectarse a la **Bandeja de Salida?** <a name="id9"></a>
 
 |Caso |  Motivo |
 |:-:|:-|
@@ -84,27 +111,28 @@
 |4 | La Compañía desea recibir información de la Plataforma DGT 3.0 en sus dispositivos conectados (App, IoT, vehículos coenctados, etc) por lo que debe implementar la lógica necesaria en su Plataforma de movilidad inteligente para notificar a los usuarios en tiempo real.|
 
 
-# **Pruebas** <a name="id7"></a>
+## *10* **Pruebas** <a name="id10"></a>
 
-- A
-- B
-- C
-- D
+*Link* de acceso a ejercicios prácticos [**aquí**](pruebas.md). Se abrirá una nueva ventana.
 
-# **Próximos pasos** <a name="id8"></a>
+## *11* **Preguntas frecuentes** <a name="id11"></a>
 
-- Pruebas de conexión real [autónomas]
+Se cumplimetará durante el taller por los ponentes.
 
-# **Preguntas frecuentes** <a name="id9"></a>
+## *12* **Resumen final** <a name="id12"></a>
 
-- A
-- B
-- C
-- D
+Resumen de las ideas principales por parte de los ponentes resumiendo las lecciones aprendidas incidiendo en aquellos aspectos más descatados detectados durante la sesión.
 
-# **Resumen final** <a name="id11"></a>
+## *13* **Próximos pasos** <a name="id13"></a>
 
-- A
-- B
-- C
-- D
+Realización de pruebas autónomas de conexión por parte del fabricante con la asistencia en remoto por parte del equipo de desarrollo de DGT 3.0. Esta consistirá en:
+
+
+- Prestar asesoría técnica a los equipos de desarrollo de los fabricantes en cuanto a los mecanismos de integración.
+- Resolver dudas tanto técnicas como funcionales.
+- Simulación de pruebas reales.
+- Solucionar los posibles errores derivados del incumplimiento de los estándares de comunicación.
+
+## *14* **Recopilación de información de fabricantes** <a name="id114"></a>
+
+Sesión abierta entre asistentes y ponentes. El objetivo principal es obtener *feedback* de los asistentes en relación a mejoras sobre el workshop, interfaces, etc.

@@ -1,11 +1,13 @@
 
-# **Ponentes**
+## **Ponentes**
 
-|Imagen|  Nombre | Empresa | Cargo | email  | Linkedin |
-|:-|:-:|:-:|:-:|
-| <img src="/images/jgcasta.png" alt="INSPIDE" width="50"/> |    José Gómez Castaño	| <img src="/images/inspide2.png" alt="INSPIDE" width="100"/> |  **CTO** | jgcasta@inspide.com 	| [linkedin.com/in/josegomezcastano](https://linkedin.com/in/josegomezcastano) | 
-||   |  |  |   |  |
-||   |  |  |   |  |
+
+| Imagen  |  Nombre |  Empresa |Cargo|email|Linkedin|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|  <img src="/images/jgcasta_bn.png" alt="INSPIDE" width="50"/> | José Gómez Castaño  | <img src="/images/inspide2.png" alt="INSPIDE" width="100"/>   | **CTO** | jgcasta@inspide.com 	| [linkedin.com/in/josegomezcastano](https://linkedin.com/in/josegomezcastano) |
+| <img src="/images/jjcabrera_bn.png" alt="INSPIDE" width="50"/> |    Juan José Cabrera	| <img src="/images/inspide2.png" alt="INSPIDE" width="100"/> |  **CEO** | jjcabrera@inspide.com 	| [linkedin.com/in/juanjosecabreragarcia](https://linkedin.com/in/juanjosecabreragarcia) |
+| <img src="/images/ivanvega.jpeg" alt="KPMG" width="50"/> | Iván Vega | <img src="/images/kpmg.png" alt="KPMG" width="100"/> | **Project Leader / Senior Systems Engeenier / Cloud Expert** | ivanvega@kpmg.es | [linkedin.com/in/ivan-vega-16488782](https://linkedin.com/in/ivan-vega-16488782) |
+
 
 # **Índice**
 
@@ -24,19 +26,19 @@
 
 # Información **práctica** <a name="id1"></a>
 
-> <img src="/images/question.png" alt="Ayuda" width="20"/> **Ayuda**
->
-> Todos los ejercicios se realizarán utilizando el método
-> **_getPmv_** que se encuentra disponible a través de *Postman*.
-> La operativa normal para la utilización de los diferentes ejemplos
-> consiste en *cortar + pegar* el código incluído en el ejemplo en el área _Body_ dentro del entorno de Postman.
->
->
-> <img src="/images/question.png" alt="API" width="20"/> **Información API BS**
->
-> La información al API de la **Bandeja de Salida** se encuentra en la siguiente url: [API BS](https://bandejasalida.docs.apiary.io/#reference/0/getroads/getcategories).
->
->
+## *03* Información **práctica** <a name="id1"></a>
+
+<img src="/images/question.png" alt="API" width="20"/> **Documentación del API Bandeja de Salida**
+
+
+La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) y  [Swagger](https://dev.iot-platform.co.uk/swagger-ui.html).
+
+<img src="/images/question.png" alt="API" width="20"/> **Herramientas**
+
+
+Para la ejecución de las pruebas es necesario el uso de un Cliente REST. Se propone la *descarga* de [Postman](https://www.getpostman.com/downloads/) como cliente para el seguimiento del workshop.
+
+
 
 # Ejercicios **prácticos** <a name="id2"></a>
 
@@ -129,7 +131,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `type`,`province`,`road`, `kpfrom`,`kpto`,`direction`,`mode`,`category` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  **Punto** |  **Madrid** | **A-2** |  **2** |	**40** |  **Ambos** |  **Ciclomotor / Motocicleta** | **Calidad del aire**  | **Sí** |
 >
 
@@ -159,7 +161,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `province` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  **Madrid** | na |  na |	na |  na |  na | na | **Sí** |
 >
 
@@ -202,7 +204,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `type` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  **Punto** |  na | na |  na |	na |  na |  na | na | **Sí** |
 >
 
@@ -263,7 +265,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `province` y `road` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  **Madrid** | A-2 |  na |	na |  na |  na | na | **Sí** |
 >
 
@@ -285,7 +287,7 @@ Ejemplo **b | Solicitud correcta**
 > siguientes atributos: `province` y `road` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  **Madrid** | **A-2** |  na |	na |  na |  na | na | **Sí** |
 >
 >
@@ -314,7 +316,7 @@ Ejemplo **c | Solicitud correcta**
 > siguientes atributos: `province` y `road` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  **Madrid** | **A-2** |  na |	na |  na |  na | na | **Sí** |
 >
 >
@@ -346,7 +348,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `province`,`road`,`kpfrom`,`kpto` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  **Madrid** | **A-2** |  **2** | **40** |  na |  na | na | **Sí** |
 >
 
@@ -396,7 +398,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `direction` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  **Ambos** |  na | na | **Sí** |
 >
 
@@ -418,7 +420,7 @@ Ejemplo **b | Solicitud correcta**
 > siguientes atributos: `direction` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  **Ambos** |  na | na | **Sí** |
 >
 >
@@ -466,7 +468,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `mode` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  na |  **Bicicleta** | na | **Sí** |
 >
 
@@ -487,7 +489,7 @@ Ejemplo **b | Solicitud correcta**
 > siguientes atributos: `mode` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  na |  **Bicicleta** | na | **Sí** |
 >
 >
@@ -513,7 +515,7 @@ Ejemplo **c | Solicitud correcta**
 > siguientes atributos: `mode` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  na |  **Bicicleta** | na | **Sí** |
 >
 >
@@ -542,7 +544,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `category` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  na |  na | **Calidad del aire** | **Sí** |
 >
 
@@ -563,7 +565,7 @@ Ejemplo **b | Solicitud correcta**
 > siguientes atributos: `category` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  na |  na | **Calidad del aire** | **Sí** |
 >
 >
@@ -608,7 +610,7 @@ Ejemplo **d | Solicitud correcta**
 > siguientes atributos: `category` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  na |  na | **Calidad del aire** | **Sí** |
 >
 >
@@ -636,7 +638,7 @@ Ejemplo **a | Solicitud correcta**
 > siguientes atributos: `direction` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  **Ambos** |  na | na | **Sí** |
 >
 
@@ -657,7 +659,7 @@ Ejemplo **b | Solicitud correcta**
 > siguientes atributos: `direction` que se indican en la siguiente Tabla:
 >
 > |  Tipo |  Provincia  | Carretera  | PK inicio  | PK final | Dirección | Modo | Categoría | Geometrías |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 > |  na |  na | na |  na |	na |  **Ambos** |  na | na | **No** |
 >
 
