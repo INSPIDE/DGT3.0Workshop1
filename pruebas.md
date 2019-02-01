@@ -1,12 +1,15 @@
+## **Autor**
 
-## **Ponentes**
+| Empresa | Fecha | Versión | Contacto |
+|:-:|:-:|:-:|:-:|
+| <img src="/images/inspide2.png" alt="INSPIDE" width="100"/>  | 01/02/2018 | 1.0 | negocio@inspide.com |
+
+## **Ponente**
 
 
 | Imagen  |  Nombre |  Empresa |Cargo|email|Linkedin|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |  <img src="/images/jgcasta_bn.png" alt="INSPIDE" width="50"/> | José Gómez Castaño  | <img src="/images/inspide2.png" alt="INSPIDE" width="100"/>   | **CTO** | jgcasta@inspide.com 	| [linkedin.com/in/josegomezcastano](https://linkedin.com/in/josegomezcastano) |
-| <img src="/images/jjcabrera_bn.png" alt="INSPIDE" width="50"/> |    Juan José Cabrera	| <img src="/images/inspide2.png" alt="INSPIDE" width="100"/> |  **CEO** | jjcabrera@inspide.com 	| [linkedin.com/in/juanjosecabreragarcia](https://linkedin.com/in/juanjosecabreragarcia) |
-| <img src="/images/ivanvega.jpeg" alt="KPMG" width="50"/> | Iván Vega | <img src="/images/kpmg.png" alt="KPMG" width="100"/> | **Project Leader / Senior Systems Engeenier / Cloud Expert** | ivanvega@kpmg.es | [linkedin.com/in/ivan-vega-16488782](https://linkedin.com/in/ivan-vega-16488782) |
 
 
 # **Índice**
@@ -38,7 +41,9 @@ La información del API de la **Bandeja de Salida** se encuentra en las siguient
 
 Para la ejecución de las pruebas es necesario el uso de un Cliente REST. Se propone la *descarga* de [Postman](https://www.getpostman.com/downloads/) como cliente para el seguimiento del workshop.
 
+<img src="/images/question.png" alt="API" width="20"/> **Diagrama de secuencia**
 
+<img src="/images/diagramasecuencia.png">
 
 # Ejercicios **prácticos** <a name="id2"></a>
 
