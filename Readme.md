@@ -1,4 +1,4 @@
-# **Workshop | Pruebas de conexión real a DGT 3.0l**
+# **Workshop Pruebas de conexión real a DGT 3.0l**
 
 Realización de pruebas de integración asistidas por el equipo de desarrollo de la Plataforma DGT 3.0.
 
