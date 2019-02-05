@@ -142,3 +142,5 @@ Realización de pruebas autónomas de conexión por parte del fabricante con la 
 ## *14* **Recopilación de información de fabricantes** <a name="id114"></a>
 
 Sesión abierta entre asistentes y ponentes. El objetivo principal es obtener *feedback* de los asistentes en relación a mejoras sobre el workshop, interfaces, etc.
+
+© 2018-2019 DGT. Todos los derechos reservados.
