@@ -79,10 +79,10 @@ Realizar pruebas de integración detalladas controladas por el equipo de desarro
 
 |Definición | Presentación|
 |:-|:-|
-| La Plataforma de Vehículo Conectado DGT 3.0 es una plataforma que ofrece servicios de seguridad vial y movilidad inteligente bajo el concepto SaaS basados en el procesamiento de información espacial.| <a href="/images/dgt30.pdf"> <img src="/images/presetanciondgt30.png"></a>|
+| La Plataforma de Vehículo Conectado DGT 3.0 es una plataforma que ofrece servicios de seguridad vial y movilidad inteligente bajo el concepto SaaS basados en el procesamiento de información espacial.| <a href="images/dgt30.pdf"> <img src="images/presetanciondgt30.png"></a>|
 
 
-> <img src="/images/question.png" alt="Ayuda" width="20"/> **Nota**
+> <img src="images/question.png" alt="Ayuda" width="20"/> **Nota**
 >
 >
 > Los servicios expuestos en DGT 3.0 abarcan todas las fases del ciclo de vida de un dato espacial:
@@ -96,7 +96,7 @@ Realizar pruebas de integración detalladas controladas por el equipo de desarro
 
 |Definición |  Video de referencia|
 |:-|:-|
-| Es un nuevo concepto que consiste en virtualizar los Paneles de Mensaje Variable tradicionales (físicos) para permite a la Dirección General de Tráfico regular la circulación adaptándola a las circunstancias cambiantes del tráfico. Se utilizan para dar información a los conductores, advertirles de posibles peligros y dar recomendaciones en cualquier punto, tramo o área de la red viaria.| [![Explicación PMV](/images/PMV.png)](https://www.youtube.com/watch?v=XBvzUR3PLQ4)|
+| Es un nuevo concepto que consiste en virtualizar los Paneles de Mensaje Variable tradicionales (físicos) para permite a la Dirección General de Tráfico regular la circulación adaptándola a las circunstancias cambiantes del tráfico. Se utilizan para dar información a los conductores, advertirles de posibles peligros y dar recomendaciones en cualquier punto, tramo o área de la red viaria.| [![Explicación PMV](images/PMV.png)](https://www.youtube.com/watch?v=XBvzUR3PLQ4)|
 
 ## *08* Formas de conexión a **DGT3.0** <a name="id8"></a>
 
