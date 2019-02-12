@@ -52,6 +52,21 @@ Para la ejecución de las pruebas es necesario el uso de un Cliente REST. Se pro
 
 Ejemplo **a | Identificación correcta**
 
+Para llevar a cabo las operaciones del API es necesario obtener un token de sesión que caducará de forma aleatoria a lo largo de la misma. La operación que permite obtenerlo es **/api/1.0/getToken** que devuelve el siguiente resultado
+
+```json
+{
+  "errorCode": 0,
+  "errorDesc": "OK",
+  "data": [
+    {
+      "token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f"
+    }
+  ]
+}
+```
+El proceso de autenticación está basado en certificados digitales de cliente. Para la realización de pruebas y posterior pase a producción, el cliente deberá cumplimentar la documentación proporcionada en la que se le solicitan los datos necesarios de la empresa que vaya a consumir los servicios. El certificado será emitido por la PKI de la plataforma y entregado físicamente al responsable del mismo.
+
 > <img src="/images/explain.png" alt="Ayuda" width="20"/>		**Explicación**
 >
 > Se trata de una identificación correcta gracias a la introducción de los valores `token`e`idcompany`.
@@ -65,6 +80,8 @@ Ejemplo **a | Identificación correcta**
 	"withgeom":1
 	}
 ```
+
+
 
 Ejemplo **b | Solicitud incorrecta por `idcompany`**
 
