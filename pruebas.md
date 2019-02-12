@@ -89,7 +89,7 @@ El proceso de autenticación está basado en certificados digitales de cliente. 
 
 > <img src="/images/explain.png" alt="Ayuda" width="20"/>		**Explicación**
 >
-> Se trata de una identificación correcta gracias a la introducción de los valores `token`e`idcompany`.
+> Se trata de una identificación correcta gracias a la introducción de los valores `token`e`idcompany`. El token es el proporcionado temporalmente por el servicio, e idcompany corresponde al campo CN del certificado digital de cliente.
 >
 
 ``` json
