@@ -36,7 +36,7 @@ Ronda inicial de presentaciones entre todos los asistentes al workshop *"Pruebas
 
 <img src="/images/question.png" alt="API" width="20"/> **Documentación del API Bandeja de Salida**
 
-La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) y  [Swagger](https://dev.iot-platform.co.uk/swagger-ui.html).
+La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) y  [Swagger](https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html).
 
 
 <img src="/images/question.png" alt="API" width="20"/> **Herramientas**

@@ -30,12 +30,10 @@
 
 # Información **práctica** <a name="id1"></a>
 
-## *03* Información **práctica** <a name="id1"></a>
-
 <img src="/images/question.png" alt="API" width="20"/> **Documentación del API Bandeja de Salida**
 
 
-La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) y  [Swagger](https://dev.iot-platform.co.uk/swagger-ui.html).
+La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) y  [Swagger](https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html).
 
 <img src="/images/question.png" alt="API" width="20"/> **Herramientas**
 
@@ -69,23 +67,62 @@ java -jar swagger-codegen-cli-2.4.1.jar generate \
 # Ejercicios **prácticos** <a name="id2"></a>
 
 
+## *00.* - Tablas maestras <a name="id21"></a>
+
+Para el filtrado de la información de los PMVV activos en cada momento, es necesario enviar un JSON con los atributos de filtrado, que responde al siguiente ejemplo
+
+```json
+{
+  "idcompany": "INSPIDE",
+  "token": "INSPIDEmola",
+  "type": 0,
+  "province": 28,
+  "road": "A2",
+  "kpfrom": 2,
+  "kpto": 50,
+  "direction": 3,
+  "mode": 3,
+  "category": 3,
+  "withgeom": 1
+}
+```
+
+Los atributos están codificados y pueden consultarse invocando al método GET de la tabla maestra correspondiente. Estas están constantemente actualizadas en https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html
+
 ## *01.* - Identificación en el servicio <a name="id21"></a>
 
 Ejemplo **a | Identificación correcta**
 
+Para llevar a cabo las operaciones del API es necesario obtener un token de sesión que caducará de forma aleatoria a lo largo de la misma. La operación que permite obtenerlo es **/api/1.0/getToken** que devuelve el siguiente resultado
+
+```json
+{
+  "errorCode": 0,
+  "errorDesc": "OK",
+  "data": [
+    {
+      "token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f"
+    }
+  ]
+}
+```
+El proceso de autenticación está basado en certificados digitales de cliente. Para la realización de pruebas y posterior pase a producción, el cliente deberá cumplimentar la documentación proporcionada en la que se le solicitan los datos necesarios de la empresa que vaya a consumir los servicios. El certificado será emitido por la PKI de la plataforma y entregado físicamente al responsable del mismo.
+
 > <img src="/images/explain.png" alt="Ayuda" width="20"/>		**Explicación**
 >
-> Se trata de una identificación correcta gracias a la introducción de los valores `token`e`idcompany`.
+> Se trata de una identificación correcta gracias a la introducción de los valores `token`e`idcompany`. El token es el proporcionado temporalmente por el servicio, e idcompany corresponde al campo CN del certificado digital de cliente.
 >
 
 ``` json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": 15,
 	"withgeom":1
 	}
 ```
+
+
 
 Ejemplo **b | Solicitud incorrecta por `idcompany`**
 
@@ -101,7 +138,7 @@ Ejemplo **b | Solicitud incorrecta por `idcompany`**
 ``` json
 	{
 	"idcompany": "Texto",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": 15,
 	"withgeom":1
 	}
@@ -120,7 +157,7 @@ Ejemplo **c | Solicitud incorrecta por `token`**
 ``` json
 	{
 	"idcompany": "INSPIDE",
-	"token": "Texto",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": 15,
 	"withgeom":1
 	}
@@ -139,7 +176,7 @@ Ejemplo **d | Solicitud incorrecta por `token` e `idcompany`**
 ``` json
 	{
 	"idcompany": "Texto",
-	"token": "Texto",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": 15,
 	"withgeom":1
 	}
@@ -164,7 +201,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"type": 1,
 	"province": 28,
 	"road": "A-2",
@@ -194,7 +231,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"province": 28,
 	"withgeom":1
 	}
@@ -213,7 +250,7 @@ Ejemplo **b | Solicitud incorrecta por `province`**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"province": "Texto",
 	"withgeom":1
 	}
@@ -237,7 +274,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"type": 1,
 	"withgeom":1
 	}
@@ -256,7 +293,7 @@ Ejemplo **b | Solicitud incorrecta por `type`**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"type": 1000,
 	"withgeom":1
 	}
@@ -275,7 +312,7 @@ Ejemplo **c | Solicitud incorrecta por `type`**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"type": "Texto",
 	"withgeom":1
 	}
@@ -298,7 +335,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"province": 28,
 	"road": "A-2",
 	"withgeom":1
@@ -327,7 +364,7 @@ Ejemplo **b | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"province": 28,
 	"road": 10000,
 	"withgeom":1
@@ -356,7 +393,7 @@ Ejemplo **c | Solicitud correcta**
 
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"province": 28,
 	"road": "Texto",
 	"withgeom":1
@@ -381,7 +418,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"province":28,
 	"road": "A-2",
 	"kpfrom": 2,
@@ -404,7 +441,7 @@ Ejemplo **b | Solicitud incorrecta por `kpfrom` menor a `kpto`**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"province":28,
 	"road": "A-2",
 	"kpfrom": 40,
@@ -432,7 +469,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"direction":1,
 	"withgeom":1
 	}
@@ -458,7 +495,7 @@ Ejemplo **b | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"direction": 10000,
 	"withgeom":1
 	}
@@ -477,7 +514,7 @@ Ejemplo **c | Solicitud incorrecta por `direction`**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"direction": "Texto",
 	"withgeom":1
 	}
@@ -501,7 +538,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"mode": 3,
 	"withgeom":1
 	}
@@ -527,7 +564,7 @@ Ejemplo **b | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"mode": 1000,
 	"withgeom":1
 	}
@@ -553,7 +590,7 @@ Ejemplo **c | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"mode": "10",
 	"withgeom":1
 	}
@@ -577,7 +614,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": 15,
 	"withgeom":1
 	}
@@ -603,7 +640,7 @@ Ejemplo **b | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": 1000,
 	"withgeom":1
 	}
@@ -622,7 +659,7 @@ Ejemplo **c | Solicitud incorrecta por `category`**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": "Texto",
 	"withgeom":1
 	}
@@ -648,7 +685,7 @@ Ejemplo **d | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"category": "15,1",
 	"withgeom":1
 	}
@@ -671,7 +708,7 @@ Ejemplo **a | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"direction":1,
 	"withgeom":1
 	}
@@ -692,7 +729,7 @@ Ejemplo **b | Solicitud correcta**
 ```json
 	{
 	"idcompany": "INSPIDE",
-	"token": "INSPIDEmola",
+	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
 	"direction":1,
 	"withgeom":0
 	}
