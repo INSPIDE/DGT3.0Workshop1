@@ -29,8 +29,6 @@
 
 # Información **práctica** <a name="id1"></a>
 
-## *03* Información **práctica** <a name="id1"></a>
-
 <img src="/images/question.png" alt="API" width="20"/> **Documentación del API Bandeja de Salida**
 
 
@@ -47,6 +45,28 @@ Para la ejecución de las pruebas es necesario el uso de un Cliente REST. Se pro
 
 # Ejercicios **prácticos** <a name="id2"></a>
 
+
+## *00.* - Tablas maestras <a name="id21"></a>
+
+Para el filtrado de la información de los PMVV activos en cada momento, es necesario enviar un JSON con los atributos de filtrado, que responde al siguiente ejemplo
+
+```json
+{
+  "idcompany": "INSPIDE",
+  "token": "INSPIDEmola",
+  "type": 0,
+  "province": 28,
+  "road": "A2",
+  "kpfrom": 2,
+  "kpto": 50,
+  "direction": 3,
+  "mode": 3,
+  "category": 3,
+  "withgeom": 1
+}
+```
+
+Los atributos están codificados y pueden consultarse invocando al método GET de la tabla maestra correspondiente. Estas están constantemente actualizadas en https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html
 
 ## *01.* - Identificación en el servicio <a name="id21"></a>
 
