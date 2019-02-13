@@ -74,7 +74,7 @@ Para el filtrado de la información de los PMVV activos en cada momento, es nece
 ```json
 {
   "idcompany": "INSPIDE",
-  "token": "INSPIDEmola",
+  "token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
   "type": 0,
   "province": 28,
   "road": "A2",
