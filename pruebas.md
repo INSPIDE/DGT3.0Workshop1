@@ -53,15 +53,15 @@ Teniendo la utilidad en el mismo directorio que el fichero api-docs.json hay que
 ```sh
 java -jar swagger-codegen-cli-2.4.1.jar generate \
   -i bandejadesalida_1.0.json \
-  --api-package es.seat.dgt30.bandejasalida.client.api \
-  --model-package es.seat.dgt30.bandejasalida.client.model \
-  --invoker-package es.seat.dgt30.bandejasalida.client.invoker \
-  --group-id es.seat \
-  --artifact-id es.seat.dgt30.bandejasalida \
+  --api-package es.xxxxxx.dgt30.bandejasalida.client.api \
+  --model-package es.xxxxxx.dgt30.bandejasalida.client.model \
+  --invoker-package es.xxxxxx.dgt30.bandejasalida.client.invoker \
+  --group-id es.xxxxxx \
+  --artifact-id es.xxxxxx.dgt30.bandejasalida \
   --artifact-version 0.0.1-SNAPSHOT \
   -l java \
   --library resttemplate \
-  -o seatDGT30BandejaSalidaClient
+  -o DGT30BandejaSalidaClient
 ```
 
 # Ejercicios **prácticos** <a name="id2"></a>
