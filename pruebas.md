@@ -64,7 +64,6 @@ java -jar swagger-codegen-cli-2.4.1.jar generate \
   -o DGT30BandejaSalidaClient
 ```
 
-# Ejercicios **prácticos** <a name="id2"></a>
 
 
 ## *00.* - Tablas maestras <a name="id21"></a>
@@ -88,6 +87,17 @@ Para el filtrado de la información de los PMVV activos en cada momento, es nece
 ```
 
 Los atributos están codificados y pueden consultarse invocando al método GET de la tabla maestra correspondiente. Estas están constantemente actualizadas en https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html
+
+Los cambios en alguna de las tablas es notificado mediante un mensaje MQTT al **tópico out.chagetables**
+```json
+{
+    "code": 1,
+    "data": [],
+    "desc": "MasterTables have a change"
+}
+```
+
+# Ejercicios **prácticos** <a name="id2"></a>
 
 ## *01.* - Identificación en el servicio <a name="id21"></a>
 
@@ -113,23 +123,31 @@ El proceso de autenticación está basado en certificados digitales de cliente. 
 > Se trata de una identificación correcta gracias a la introducción de los valores `token`e`idcompany`. El token es el proporcionado temporalmente por el servicio, e idcompany corresponde al campo CN del certificado digital de cliente.
 >
 
-``` json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"category": 15,
-	"withgeom":1
-	}
+Ejemplo **b | Solicitud correcta
+```json
+{
+    "category": 15,
+    "idcompany": "cn.correcto",
+    "token": "token.correcto",
+    "withgeom": 1
+}
 ```
 
-
+Si la identifiación es errónea, se obtiene el siguiente mensaje
+```json
+{
+    "errorCode": 10,
+    "errorDesc": "Authorization error",
+    "data": []
+}
+```
 
 Ejemplo **b | Solicitud incorrecta por `idcompany`**
 
 
 > <img src="/images/explain.png" alt="Explicación" width="20"/>		**Explicación**
 >
-> Se trata de una identificación errónea debido a que se ha introducido el valor `idcompany` incorrectamente.
+> No se proporciona `idcompany` válido.
 >
 > - Código de Error: **10**
 > - Descripción del error: **Authorization error**
@@ -137,8 +155,8 @@ Ejemplo **b | Solicitud incorrecta por `idcompany`**
 
 ``` json
 	{
-	"idcompany": "Texto",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
+	"idcompany": "cn.erroneo",
+	"token": "token.correcto",
 	"category": 15,
 	"withgeom":1
 	}
@@ -148,7 +166,7 @@ Ejemplo **c | Solicitud incorrecta por `token`**
 
 > <img src="/images/explain.png" alt="Explicación" width="20"/>	**Explicación**
 >
-> Se trata de una identificación errónea debido a que se ha introducido el valor `token` incorrectamente.
+> No se proporciona `token` válido.
 >
 > - Código de Error: **10**
 > - Descripción del error: **Authorization error**
@@ -156,8 +174,8 @@ Ejemplo **c | Solicitud incorrecta por `token`**
 
 ``` json
 	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
+	"idcompany": "cn.correcto",
+	"token": "token.erroneo",
 	"category": 15,
 	"withgeom":1
 	}
@@ -175,8 +193,8 @@ Ejemplo **d | Solicitud incorrecta por `token` e `idcompany`**
 
 ``` json
 	{
-	"idcompany": "Texto",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
+	"idcompany": "cn.erroneo",
+	"token": "token.erroneo",
 	"category": 15,
 	"withgeom":1
 	}
