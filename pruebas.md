@@ -11,6 +11,11 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |  <img src="/images/jgcasta_bn.png" alt="INSPIDE" width="50"/> | José Gómez Castaño  | <img src="/images/inspide2.png" alt="INSPIDE" width="100"/>   | **CTO** | jgcasta@inspide.com 	| [linkedin.com/in/josegomezcastano](https://linkedin.com/in/josegomezcastano) |
 
+## Contacto de Soporte
+
+Para solventar cualquier duda o incidencia se ha abierto un buzón de correo en el que se atenderán estas
+
+soporte@cmobility30.es
 
 # **Índice**
 
