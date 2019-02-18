@@ -97,6 +97,29 @@ Los cambios en alguna de las tablas es notificado mediante un mensaje MQTT al **
 }
 ```
 
+En estes caso, o cuando se desee, se puede consultar la últmia actaulilzación de las mismas para solicitar su contenido, mediante el método  **/api/1.0/mastertables/getChangeTables** , lo que devuelve el siguiente mensaje
+
+```json
+{
+  "errorCode": 0,
+  "errorDesc": "OK",
+  "data": [
+    {
+      "idchange": 1,
+      "tschange": "2019-02-20T05:00:00.000+0000",
+      "tablename": "Categories"
+    },
+    {
+      "idchange": 2,
+      "tschange": "2019-02-20T01:00:00.000+0000",
+      "tablename": "ErrorCodes"
+    }
+	]
+}
+```
+
+
+
 # Ejercicios **prácticos** <a name="id2"></a>
 
 ## *01.* - Identificación en el servicio <a name="id21"></a>
@@ -123,7 +146,7 @@ El proceso de autenticación está basado en certificados digitales de cliente. 
 > Se trata de una identificación correcta gracias a la introducción de los valores `token`e`idcompany`. El token es el proporcionado temporalmente por el servicio, e idcompany corresponde al campo CN del certificado digital de cliente.
 >
 
-Ejemplo **b | Solicitud correcta
+Ejemplo **b | Solicitud correcta**
 ```json
 {
     "category": 15,
