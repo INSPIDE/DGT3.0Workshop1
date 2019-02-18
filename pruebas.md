@@ -88,7 +88,10 @@ Para el filtrado de la información de los PMVV activos en cada momento, es nece
 
 Los atributos están codificados y pueden consultarse invocando al método GET de la tabla maestra correspondiente. Estas están constantemente actualizadas en https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html
 
-Los cambios en alguna de las tablas es notificado mediante un mensaje MQTT al tópico **out.changetables**
+## Cmbios en las tablas Maestras
+
+Los cambios en alguna de las tablas es notificado mediante un mensaje MQTT al tópico **out.changetables** según el siguiente diagrama de secuencia
+
 ```json
 {
     "code": 1,
@@ -127,6 +130,7 @@ En estes caso, o cuando se desee, se puede consultar la últmia actaulilzación 
 Ejemplo **a | Identificación correcta**
 
 Para llevar a cabo las operaciones del API es necesario obtener un token de sesión que caducará de forma aleatoria a lo largo de la misma. La operación que permite obtenerlo es **/api/1.0/getToken** que devuelve el siguiente resultado
+<img src="images/diagramasecuencia.png" alt="Ayuda" />
 
 ```json
 {
