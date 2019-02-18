@@ -92,6 +92,8 @@ Los atributos están codificados y pueden consultarse invocando al método GET d
 
 Los cambios en alguna de las tablas es notificado mediante un mensaje MQTT al tópico **out.changetables** según el siguiente diagrama de secuencia
 
+<img src="images/secnotifmastertables.png" alt="Ayuda" />
+
 ```json
 {
     "code": 1,
