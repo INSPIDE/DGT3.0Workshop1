@@ -88,7 +88,7 @@ Para el filtrado de la información de los PMVV activos en cada momento, es nece
 
 Los atributos están codificados y pueden consultarse invocando al método GET de la tabla maestra correspondiente. Estas están constantemente actualizadas en https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html
 
-## Cmbios en las tablas Maestras
+## Cambios en las tablas Maestras
 
 Los cambios en alguna de las tablas es notificado mediante un mensaje MQTT al tópico **out.changetables** según el siguiente diagrama de secuencia
 
