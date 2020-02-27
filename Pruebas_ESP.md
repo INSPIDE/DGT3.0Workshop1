@@ -1,7 +1,7 @@
 ## **Autor**
 
 | Empresa | Fecha | Versión |
-|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|
 | <img src="/images/inspide2.png" alt="INSPIDE" width="100"/>  | 12/03/2019 | 2.0 |
 
 ## **Ponente**
