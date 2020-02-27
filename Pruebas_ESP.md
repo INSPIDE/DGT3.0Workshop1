@@ -42,6 +42,7 @@ La información del API de la **Bandeja de Salida** se encuentra en las siguient
 
 
 Se ha actrualizado el interfaz para permitir la publicación de incidencias de LINCE y Obras en ejecución. La documentación asociada puede encontrarse en el documento [DESCRIPCIÓN API BANDEJA DE SALIDA[(https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20200124%20API%20Bandeja%20Salida%20v.1.1.pdf)]
+
 <img src="/images/question.png" alt="API" width="20"/> **Herramientas**
 
 
