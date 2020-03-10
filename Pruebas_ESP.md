@@ -41,7 +41,8 @@ soporte@cmobility30.es
 La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) (Acceso libre) y  [Swagger](https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html) (requerido certificado)
 
 
-Se ha actrualizado el interfaz para permitir la publicación de incidencias de LINCE y Obras en ejecución. La documentación asociada puede encontrarse en el documento [DESCRIPCIÓN API BANDEJA DE SALIDA[(https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20200124%20API%20Bandeja%20Salida%20v.1.1.pdf)]
+Se ha actualizado el interfaz para permitir la publicación de incidencias de LINCE y Obras en ejecución. Junto a esta información se ha comenzado a publicar la información procedente de la señal V16. La documentación asociada puede encontrarse en el documento [DESCRIPCIÓN API BANDEJA DE SALIDA[(https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20200124%20API%20Bandeja%20Salida%20v.1.2.pdf)] La relación entre las incidencias LINCE y la iconografía está descrita en [20191010_DGT30_0.xlsx](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20191010_DGT30_0.xlsx)
+
 
 <img src="/images/question.png" alt="API" width="20"/> **Herramientas**
 
