@@ -341,8 +341,8 @@ Mediante al operación **GET** al endpoint **/api/1.0/nap** es posible la obtenc
     </payloadPublication>
 </d2LogicalModel>
 ```
-La guí de utilización de los datos se encuentra disponible en http://infocar.dgt.es/datex2/informacion_adicional/Guia%20de%20Utilizacion%20de%20DATEX%20II.pdf
+La guía de utilización de los datos se encuentra disponible en [Guía de uso de DATEXII](http://infocar.dgt.es/datex2/informacion_adicional/Guia%20de%20Utilizacion%20de%20DATEX%20II.pdf)
 
-Las librerías DATEXII con las extensiones de España están disponibles para su descarga en http://infocar.dgt.es/datex2/informacion_adicional/Ayuda%20desarrollador/Librerias%20Java
+Las librerías DATEXII con las extensiones de España están disponibles para su descarga en [Librerias de parseo para DATEXII](http://infocar.dgt.es/datex2/informacion_adicional/Ayuda%20desarrollador/Librerias%20Java)
 
 © 2018-2019 DGT. Todos los derechos reservados.
