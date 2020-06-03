@@ -25,10 +25,7 @@ To solve any doubt or incident, a mailbox has been opened in which these: soport
 	4. [Request of PMVs of a Type](#id24)
 	5. [Application for PMVs of a highway](#id25)
 	6. [Request PMVs of a highway between two kilometric points](#id26)
-	7. [Request for PMVs according to the direction of circulation](#id27)
-	8. [Request of PMVs according to transport mode](#id28)
-	9. [Request of PMVs according to the category of the event](#id29)
-	10. [Request PMVs without geometry, only alphanumeric values](#id210)
+3. [National Access Point publication](#id3)
 
 # Practical **information** <a name="id1"></a>
 
@@ -37,7 +34,7 @@ To solve any doubt or incident, a mailbox has been opened in which these: soport
 
 The API information of the API **'Bandeja de Salida'** can be found in the following URLs: [Apiary](https://bandejasalidaeng.docs.apiary.io) (Free access) and [Swagger](https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html) (Certificate required).
 
-The interface has been updated to allow the publication of LINCE and Works in progress incidents. Along with this information, the information obtained from the V16 signal has been published. The associated documentation can be found in the document [Bandeja de Salida specification 1.2](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/ENG_API_Bandeja_de_Salida_v1.2.pdf) The relationship between LINCE incidents and the iconography is described in [20191010_DGT30_0.xlsx](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20191010_DGT30_0.xlsx)
+The interface has been updated to allow the publication of LINCE and Works in progress incidents. Along with this information, the information obtained from the V16 signal has been published. The associated documentation can be found in the document [Bandeja de Salida specification 1.2](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/ENG_API_Bandeja_de_Salida_v1.3.pdf) The relationship between LINCE incidents and the iconography is described in [20191010_DGT30_0.xlsx](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20191010_DGT30_0.xlsx)
 
 <img src="/images/question.png" alt="API" width="20"/> **Tools**
 
@@ -305,147 +302,8 @@ Example **b | Incorrect request by `province`**
 	}
 ```
 
-## *04.* - Request of PMVs by Type<a name="id24"></a>
 
-
-Example **a | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes:: `type` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  **Point** |  na | na |  na |	na |  na |  na | na | **Yes** |
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"type": 1,
-	"withgeom":1
-	}
-```
-
-Example **b | Incorrect request by `type`**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> This is an erroneous request because the `type` value has been entered incorrectly since it is not a valid *value*.
->
-> - Error Code: **9**
-> - Description of the error: **Type is not valid**
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"type": 1000,
-	"withgeom":1
-	}
-```
-
-Example **c | Incorrect request by `type`**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> This is an erroneous request because the `type` value has been entered incorrectly since it is not an *integer* value.
->
-> - Error Code: **9**
-> - Error description: **Type must be an integer value**
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"type": "Texto",
-	"withgeom":1
-	}
-```
-
-## *05.* - Request PMVs of a highway <a name="id25"></a>
-
-Example **a | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `province` y `road` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  **Madrid** | A-2 |  na |	na |  na |  na | na | **Yes** |
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"province": 28,
-	"road": "A-2",
-	"withgeom":1
-	}
-```
-
-Example **b | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `province` y `road` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  **Madrid** | **A-2** |  na |	na |  na |  na | na | **Yes** |
->
->
-> ** Note **
->
-> The value '0' in the attribute "pmvProv" indicates that it is PMV type area that intersects with the requested Province (in this case 28).
-> It is due to the information associated with a PMV type area, they do not contain the Province.
->
-
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"province": 28,
-	"road": 10000,
-	"withgeom":1
-	}
-```
-
-Example **c | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `province` y `road` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  **Madrid** | **A-2** |  na |	na |  na |  na | na | **Yes** |
->
->
-> ** Note **
->
-> The value '0' in the attribute "pmvProv" indicates that it is PMV type area that intersects with the requested Province (in this case 28).
-> It is due to the information associated with a PMV type area, they do not contain the Province.
->
-
-```json
-
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"province": 28,
-	"road": "Texto",
-	"withgeom":1
-	}
-```
-
-## *06.* - Request PMVs of a highway between two kilometric points<a name="id26"></a>
+## *04.* - Request PMVs of a highway between two kilometric points<a name="id26"></a>
 
 
 Example **a | Correct request**
@@ -493,277 +351,27 @@ Example **b | Incorrect request for `kpfrom` less than `kpto`**
 	}
 ```
 
+# National Access Point information <a name="id3"></a>
 
-## *07.* - Request PMVs according to the direction of circulation <a name="id27"></a>
+Through the operation ** GET ** at the endpoint **/api/1.0/nap ** it is possible to obtain all the events that are published in the National Access Point of Spain that is under your responsibility DGT. The returned dataset follows the DATEXII standard
 
-Example **a | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `direction` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  **Both** |  na | na | **Yes** |
->
-
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"direction":1,
-	"withgeom":1
-	}
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<d2LogicalModel modelBaseVersion="1.0" xsi:schemaLocation="http://datex2.eu/schema/1_0/1_0 http://datex2.eu/schema/1_0/1_0/DATEXIISchema_1_0_1_0.xsd" xmlns="http://datex2.eu/schema/1_0/1_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <exchange>
+        <supplierIdentification>
+            <country>es</country>
+            <nationalIdentifier>dgt</nationalIdentifier>
+        </supplierIdentification>
+    </exchange>
+    <payloadPublication xsi:type="_0:SituationPublication" lang="es" xmlns:_0="http://datex2.eu/schema/1_0/1_0">
+	.....................
+	.....................
+    </payloadPublication>
+</d2LogicalModel>
 ```
+The data use guide is available in [DATEXII Use Guide](http://infocar.dgt.es/datex2/informacion_adicional/Guia%20de%20Utilizacion%20de%20DATEX%20II.pdf)
 
-Example **b | Correct request**
+DATEXII libraries with extensions in Spain are available for download at [Librerias de parseo para DATEXII](http://infocar.dgt.es/datex2/informacion_adicional/Ayuda%20desarrollador/Librerias%20Java)
 
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `direction` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  **Both** |  na | na | **Yes** |
->
->
-> ** Note **
->
-> The value of direction 1000 does not exist, then there are no PMVs that match the search criteria.
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"direction": 10000,
-	"withgeom":1
-	}
-```
-
-Example **c | Incorrect request by `direction` **
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> This is an erroneous request because the `direction` value has been entered incorrectly since it is not an *integer* value.
->
-> - Error Code:  **7**
-> - Error description: **Direction must be an integer value**
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"direction": "Texto",
-	"withgeom":1
-	}
-```
-
-
-## *08.* - Request PMVs depending on the mode of transport <a name="id28"></a>
-
-Example **a | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `mode` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  na |  **Bike** | na | **Yes** |
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"mode": 3,
-	"withgeom":1
-	}
-```
-
-Example **b | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `mode` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  na |  **Bike** | na | **Yes** |
->
->
-> ** Note **
->
-> The value of mode 1000 does not exist, then there are no PMVs that match the search criteria.
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"mode": 1000,
-	"withgeom":1
-	}
-```
-
-Example **c | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `mode` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  na |  **Bike** | na | **Yes** |
->
->
-> ** Note **
->
-> The query is valid in all fields, then if there are PMVs that match the search criteria, they will appear inside the data array.
->
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"mode": "10",
-	"withgeom":1
-	}
-```
-
-
-## *09.* - Request PMVs according to the category of the event <a name="id29"></a>
-
-Example **a | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `category` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  na |  na | **Air quality** | **Yes** |
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"category": 15,
-	"withgeom":1
-	}
-```
-
-Example **b | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `category` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  na |  na | **Air quality** | **Yes** |
->
->
-> ** Note **
->
-> The query is valid in all fields, then if there are PMVs that match the search criteria, they will appear inside the data array.
->
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"category": 1000,
-	"withgeom":1
-	}
-```
-
-Example **c | Incorrect request by `category`**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> This is an erroneous request because the `category` value has been entered incorrectly since it is not an *integer* value.
->
-> - Error Code: **11**
-> - Error description: **Category must be an integer value**
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"category": "Texto",
-	"withgeom":1
-	}
-```
-
-Example **d | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `category` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  na |  na | **Air quality** | **Yes** |
->
->
-> ** Note **
->
-> The query is valid in all fields, then if there are PMVs that match the search criteria, they will appear inside the data array.
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"category": "15,1",
-	"withgeom":1
-	}
-```
-
-## *10.* - Request PMVs without geometry, only alphanumeric values <a name="id210"></a>
-
-Example **a | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric and geographic information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `direction` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  **Both** |  na | na | **Yes** |
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"direction":1,
-	"withgeom":1
-	}
-```
-
-Example **b | Correct request**
-
-> <img src="/images/explain.png" alt="Explanation" width="20"/>	**Explanation**
->
-> Correct application of the alphanumeric information (`withgeom`) of the set of Virtual Message Panels according to the following attributes: `direction` that are indicated in the following Table:
->
-> | Type | Province | Road | PK home | Final station | Address | Mode | Category | Geometries |
-> |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-> |  na |  na | na |  na |	na |  **Both** |  na | na | **No** |
->
-
-```json
-	{
-	"idcompany": "INSPIDE",
-	"token": "28a9e96167a6ee0f84bb9c46e8a3b381032f7d9de59ce882539db044e4ee691f",
-	"direction":1,
-	"withgeom":0
-	}
-```
-
-© 2018-2019 DGT. All rights reserved.
+© 2018-2020 DGT. All rights reserved.
