@@ -345,4 +345,4 @@ La guía de utilización de los datos se encuentra disponible en [Guía de uso d
 
 Las librerías DATEXII con las extensiones de España están disponibles para su descarga en [Librerias de parseo para DATEXII](http://infocar.dgt.es/datex2/informacion_adicional/Ayuda%20desarrollador/Librerias%20Java)
 
-© 2018-2019 DGT. Todos los derechos reservados.
+© 2018-2020 DGT. Todos los derechos reservados.
