@@ -34,7 +34,7 @@ To solve any doubt or incident, a mailbox has been opened in which these: soport
 
 The API information of the API **'Bandeja de Salida'** can be found in the following URLs: [Apiary](https://bandejasalidaeng.docs.apiary.io) (Free access) and [Swagger](https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html) (Certificate required).
 
-The interface has been updated to allow the publication of LINCE and Works in progress incidents. Along with this information, the information obtained from the V16 signal has been published. The associated documentation can be found in the document [Bandeja de Salida specification 1.2](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/ENG_API_Bandeja_de_Salida_v1.3.pdf) The relationship between LINCE incidents and the iconography is described in [20191010_DGT30_0.xlsx](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20191010_DGT30_0.xlsx)
+The interface has been updated to allow the publication of LINCE and Works in progress incidents. Along with this information, the information obtained from the V16 signal has been published. The associated documentation can be found in the document [Bandeja de Salida specification 1.3](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/ENG_API_Bandeja_de_Salida_v1.3.pdf) The relationship between LINCE incidents and the iconography is described in [20191010_DGT30_0.xlsx](https://github.com/INSPIDE/DGT3.0Workshop1/blob/master/aux/20191010_DGT30_0.xlsx)
 
 <img src="/images/question.png" alt="API" width="20"/> **Tools**
 
