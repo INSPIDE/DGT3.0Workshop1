@@ -156,7 +156,7 @@ El mensaje generado por la petición tiene el siguiente formato:
       "pmvMode": "2,3",
       "pmvProvFin": "0",
       "pmvRoadFin": "null",
-      "gid": "GID_21547_325412"
+      "gid": "GUID_Suc_3508247_3508247"
     }
   ]
 }
