@@ -20,9 +20,9 @@ soporte@cmobility30.es
 # **Índice**
 
 1. [Información de práctica](#id1)
-	1. [Generación automática del cliente](#id1.1)
-  2. [Tablas Maestras](#id1.2)
-  3. [Mensajes generados](#id1.1)
+	1. [Generación automática del cliente](#id11)
+  2. [Tablas Maestras](#id12)
+  3. [Mensajes generados](#id13)
 2. [Ejercicios prácticos](#id2)
 	1. [Identificación en el servicio](#id21)
 	2. [Solicitud de PMVs anidados](#id22)
@@ -52,7 +52,7 @@ Para la ejecución de las pruebas es necesario el uso de un Cliente REST. Se pro
 
 <img src="/images/diagramasecuencia.png">
 
-## *1.1* Generación automática de un cliente <a name="id1.1"></a>
+## *1.1* Generación automática de un cliente <a name="id11"></a>
 
 Al estar basado en SWAGGER la publicación del API, es posible utilizar la utilidad [swagger-codegen-cli](https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22io.swagger%22%20AND%20a%3A%22swagger-codegen-cli%22) para generar una aplicación completa, a partir del fichero JSON obtenido de la descarga https://bandejadesalida-dev.cmobility30.es:8443/v2/api-docs (requerido certificado)
 
@@ -74,7 +74,7 @@ java -jar swagger-codegen-cli-2.4.1.jar generate \
 
 
 
-## *1.2* - Tablas maestras <a name="id1.2"></a>
+## *1.2* - Tablas maestras <a name="id12"></a>
 
 Para el filtrado de la información de los PMVV activos en cada momento, es necesario enviar un JSON con los atributos de filtrado, que responde al siguiente ejemplo
 
@@ -131,7 +131,7 @@ En estes caso, o cuando se desee, se puede consultar la últmia actaulilzación 
 }
 ```
 
-## *1.3.* - Mensaje generados <a name="id1.3"></a>
+## *1.3.* - Mensaje generados <a name="id13"></a>
 
 El mensaje generado por la petición tiene el siguiente formato:
 
