@@ -21,6 +21,8 @@ soporte@cmobility30.es
 
 1. [Información de práctica](#id1)
 	1. [Generación automática del cliente](#id1.1)
+  2. [Tablas Maestras](#id1.2)
+  3. [Mensajes generados](#id1.1)
 2. [Ejercicios prácticos](#id2)
 	1. [Identificación en el servicio](#id21)
 	2. [Solicitud de PMVs anidados](#id22)
@@ -72,7 +74,7 @@ java -jar swagger-codegen-cli-2.4.1.jar generate \
 
 
 
-## *00.* - Tablas maestras <a name="id21"></a>
+## *1.2* - Tablas maestras <a name="id1.2"></a>
 
 Para el filtrado de la información de los PMVV activos en cada momento, es necesario enviar un JSON con los atributos de filtrado, que responde al siguiente ejemplo
 
@@ -129,7 +131,36 @@ En estes caso, o cuando se desee, se puede consultar la últmia actaulilzación 
 }
 ```
 
+## *1.3.* - Mensaje generados <a name="id1.3"></a>
 
+El mensaje generado por la petición tiene el siguiente formato:
+
+```json
+{
+  "errorCode": 0,
+  "reason": "OK",
+  "data": [
+    {
+      "pmvGeomWkt": "POINT",
+      "pmvId": 162,
+      "pmvMsg": "Precaución",
+      "pmvType": 1,
+      "pmvProv": 28,
+      "pmvRoad": "A2",
+      "pmvPk": 13.36,
+      "pmvPkIni": 0,
+      "pmvPkFin": 0,
+      "pmvEvent": 0,
+      "pmvDirection": 1,
+      "pmvCategory": 15,
+      "pmvMode": "2,3",
+      "pmvProvFin": "0",
+      "pmvRoadFin": "null",
+      "gid": "GID_21547_325412"
+    }
+  ]
+}
+```
 
 # Ejercicios **prácticos** <a name="id2"></a>
 
