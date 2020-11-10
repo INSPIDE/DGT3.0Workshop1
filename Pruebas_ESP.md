@@ -144,6 +144,7 @@ El mensaje generado por la petición tiene el siguiente formato:
       "pmvGeomWkt": "POINT",
       "pmvId": 162,
       "pmvMsg": "Precaución",
+      "pmvImg": "P50O",
       "pmvType": 1,
       "pmvProv": 28,
       "pmvRoad": "A2",
