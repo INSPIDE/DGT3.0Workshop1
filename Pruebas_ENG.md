@@ -49,21 +49,6 @@ For the execution of the tests the use of a REST Client is necessary. The * down
 
 Since the publication of the API is based on SWAGGER, it is possible to use the utility [swagger-codegen-cli](https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22io.swagger%22%20AND%20a%3A%22swagger-codegen-cli%22) to generate a complete application, from the JSON file obtained from the download https://bandejadesalida-dev.cmobility30.es:8443/v2/api-docs (Certificate required).
 
-Having the utility in the same directory as the api-docs.json file, execute the command.
-
-```sh
-java -jar swagger-codegen-cli-2.4.1.jar generate \
-  -i bandejadesalida_1.0.json \
-  --api-package es.xxxxxx.dgt30.bandejasalida.client.api \
-  --model-package es.xxxxxx.dgt30.bandejasalida.client.model \
-  --invoker-package es.xxxxxx.dgt30.bandejasalida.client.invoker \
-  --group-id es.xxxxxx \
-  --artifact-id es.xxxxxx.dgt30.bandejasalida \
-  --artifact-version 0.0.1-SNAPSHOT \
-  -l java \
-  --library resttemplate \
-  -o DGT30BandejaSalidaClient
-```
 
 ## *00.* - Master tables <a name="id21"></a>
 
