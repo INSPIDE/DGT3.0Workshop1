@@ -36,7 +36,7 @@ Ronda inicial de presentaciones entre todos los asistentes al workshop *"Pruebas
 
 <img src="/images/question.png" alt="API" width="20"/> **Documentación del API Bandeja de Salida**
 
-La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls: [Apiary](https://bandejasalida.docs.apiary.io) (acceso sin certificado) y  [Swagger](https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html) (requerido certificado).
+La información del API de la **Bandeja de Salida** se encuentra en las siguientes urls:  [Swagger](https://bandejadesalida-dev.cmobility30.es:8443/swagger-ui.html) (requerido certificado).
 
 
 <img src="/images/question.png" alt="API" width="20"/> **Herramientas**
@@ -60,6 +60,7 @@ Para la ejecución de las pruebas es necesario el uso de un Cliente REST. Se pro
 12. [Resumen final](#id12)
 13. [Próximos pasos](#id13)
 14. [Recopilación de información de fabricantes](#id14)
+15. [Tablas auxiliares](#id15)
 
 ## *05* **Objetivos** <a name="id5"></a>
 
@@ -141,5 +142,91 @@ Realización de pruebas autónomas de conexión por parte del fabricante con la 
 ## *14* **Recopilación de información de fabricantes** <a name="id114"></a>
 
 Sesión abierta entre asistentes y ponentes. El objetivo principal es obtener *feedback* de los asistentes en relación a mejoras sobre el workshop, interfaces, etc.
+
+# Tablas auxiliares <a name="id15"></a>
+
+A continuación se listan las tablas y su contenido, necesarios para la codificación y decodificación de los mensajes.
+
+## Categoría del evento
+
+Etiqueta del Tipo de Evento indicado por el PMV.
+
+category|Descripción
+--|--
+0	|Desconocido / general
+1	|Vulnerable
+2	||Incidencia
+3	|Obra
+4	|Conservación
+5	|Estado de la infraestructura
+6	|Tiempos de embarque
+7	|Accidente / Detenido
+8	|Meteorológica
+9	|Estado del tráfico
+10	|Radar
+11	|Obstáculo
+12	|Eventos
+13	|Restricción
+14	|Calidad del aire
+15	|Puertos
+16	|Derramamiento
+17	|Estado parking
+18	|Obstáculo fijo
+19	|Obstáculo móvil
+20	|Medidas de regulación
+21	|Embolsamiento
+22	|Alteración capacidad
+23	|Alteración carretera
+24	|Malas condiciones de la carreteraModo de transporte
+
+## Tipos de modos de transporte 
+
+Contemplados en la plataforma y que son utilizados en el PMV para indicar qué modo de transporte está afectado por el PMV.
+
+mode|	Descripción
+--|--
+1	|Bicicleta
+2	|Peatón
+3	|Ciclomotor / Motocicleta
+4	|Tracción animal
+5	|Tractor
+6	|Autocaravana
+7	|Turismo
+8	|Furgón/furgoneta
+9	|Autobús o autocar
+10	|Camión
+
+## Dirección
+
+Atributo que indica el sentido de circulación al que aplica el PMV.
+
+direction	|Descripción
+--|--
+1	|Ambos
+2	|Creciente
+3	|DecrecienteEventoAtributo que indica la forma de consumir la información de un 
+
+## PMV tipo Área.
+
+event|	Descripción
+--|--
+1	|Al entrar
+2	|Al salirTipoTipo de PMV.
+
+type	|Descripción
+--|--
+1	|Punto
+2	|Tramo
+3	|Área
+99	|Todos
+
+## Geometría
+
+Se requiere o no devolución de la geometría del PMV en la respuesta
+
+withgeom|	Descripción
+--|--
+1	|Si
+0	|No
 
 © 2018-2019 DGT. Todos los derechos reservados.
